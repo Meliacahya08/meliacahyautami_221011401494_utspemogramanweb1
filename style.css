@@ -1,0 +1,149 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* BODY */
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffb347,#ff69b4);
+    transition:0.3s;
+}
+
+/* KALKULATOR */
+.calculator{
+    width:360px;
+    background:#f7f7f7;
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* TOP MENU */
+.top-menu{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:30px;
+}
+
+.top-menu button{
+    width:120px;
+    height:60px;
+    border:none;
+    border-radius:30px;
+    background:#ececec;
+    font-size:22px;
+    cursor:pointer;
+}
+
+/* DISPLAY */
+.display{
+    margin-bottom:30px;
+}
+
+.display input{
+    width:100%;
+    height:60px;
+    border:none;
+    outline:none;
+    border-radius:20px;
+    background:#ececec;
+    padding:30px;
+    text-align:right;
+    font-size:42px;
+    color:#555;
+}
+
+/* BUTTON GRID */
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+/* SEMUA BUTTON */
+.buttons button{
+    width:120%;
+    height:60px;
+    border:none;
+    border-radius:20px;
+    background:#ececec;
+    font-size:28px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+
+/* HOVER */
+.buttons button:hover{
+    transform:scale(1.05);
+}
+
+/* OPERATOR */
+.operator{
+    background:#ffd166 !important;
+}
+
+/* HASIL */
+.equal{
+    background:#ff5ca8 !important;
+    color:white;
+}
+
+/* ANGKA 0 */
+.zero{
+    grid-column:span 2;
+}
+
+/* ================= DARK MODE ================= */
+
+.dark{
+    background:linear-gradient(135deg,#111,#444);
+}
+
+.dark .calculator{
+    background:#222;
+}
+
+.dark .display input{
+    background:#333;
+    color:white;
+}
+
+.dark .buttons button{
+    background:#444;
+    color:white;
+}
+
+.dark .operator{
+    background:#666 !important;
+    color:white;
+}
+
+.dark .equal{
+    background:#ff5ca8 !important;
+}
+
+/* RESPONSIVE */
+@media(max-width:500px){
+
+    .calculator{
+        width:95%;
+        padding:20px;
+    }
+
+    .buttons button{
+        height:120px;
+        font-size:24px;
+    }
+
+    .display input{
+        height:75px;
+        font-size:32px;
+    }
+}
